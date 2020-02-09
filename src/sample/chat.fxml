@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<BorderPane fx:id="borderPane" xmlns="http://javafx.com/javafx/8.0.999-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ChatView">
+    <top>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="250.0">
+            <children>
+                <ImageView fx:id="imageView" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="NEVER">
+                    <image>
+                        <Image url="@chat.png" />
+                    </image>
+                </ImageView>
+                <Text fill="#252323" strokeType="OUTSIDE" strokeWidth="0.0" text="JETS">
+                    <font>
+                        <Font size="28.0" />
+                    </font>
+                </Text>
+            </children>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+        </HBox>
+    </top>
+    <center>
+        <VBox prefHeight="700.0" prefWidth="600.0" spacing="20.0">
+            <children>
+                <ScrollPane fx:id="scrollPane">
+                    <content>
+                        <VBox fx:id="messagesVBox" spacing="20" style="-fx-background-color: #e0e0eb;">
+                        </VBox>
+                    </content>
+                </ScrollPane>
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" />
+            </padding>
+            <BorderPane.margin>
+                <Insets top="10.0" />
+            </BorderPane.margin>
+        </VBox>
+    </center>
+    <bottom>
+        <TextField fx:id="messageTextField" prefHeight="40" promptText="Enter message">
+            <BorderPane.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </BorderPane.margin></TextField>
+    </bottom>
+</BorderPane>
